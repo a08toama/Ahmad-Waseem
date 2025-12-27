@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Waseem AI - المستقبل بين يديك</title>
+
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#15202e', // Between 800 and 900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-slate-900 text-slate-50 min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+
+    <!-- Background Decoration -->
+    <div class="bg-grid-pattern"></div>
+    <div class="bg-watermark">Ahmad Waseem AI</div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Hero Section -->
+    <section class="relative px-4 text-center z-10 w-full max-w-5xl">
+
+        <!-- Animated Badge -->
+        <div class="flex justify-center mb-10">
+            <span
+                class="inline-flex items-center gap-2 py-2 px-6 rounded-full bg-slate-800/50 border border-sky-500/30 backdrop-blur-md text-sky-400 text-sm font-medium animate-pulse shadow-[0_0_20px_rgba(56,189,248,0.2)]">
+                <span class="relative flex h-3 w-3">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                </span>
+                Ahmad Waseem AI
+            </span>
+        </div>
+
+        <!-- Typewriter Headline -->
+        <h1 class="text-4xl sm:text-6xl md:text-9xl font-black leading-tight mb-6 md:mb-8 tracking-tighter">
+            أدواتك لـ <br class="md:hidden">
+            <span class="text-gradient-pro typewrite" data-period="2000"
+                data-type='[ "المستقبل.", "الإبداع.", "الاحتراف." ]'><span class="wrap"></span></span>
+        </h1>
+
+        <p
+            class="text-base md:text-2xl text-slate-400 mb-10 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light delay-100 scroll-reveal visible">
+            أقوى منصة عربية لمراجعة واكتشاف <span class="text-white font-medium border-b-2 border-sky-500">أدوات الذكاء
+                الاصطناعي</span>.
+        </p>
+
+        <div class="flex flex-col items-center justify-center delay-200 scroll-reveal visible w-full">
+            <a href="apps.html"
+                class="cta-button text-white text-lg md:text-xl font-bold py-4 md:py-5 px-10 md:px-16 rounded-2xl shadow-2xl transition-all hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-4 group w-full sm:w-auto">
+                <span>ابدأ التصفح الآن</span>
+                <i class="fas fa-arrow-left group-hover:-translate-x-2 transition-transform"></i>
+            </a>
+            <p class="mt-6 text-slate-500 text-sm">مجاني 100% • تحديث يومي</p>
+        </div>
+    </section>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
