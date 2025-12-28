@@ -21,14 +21,14 @@ const tools = [
         link: "#"
     },
     {
-        id: 3,
-        name: "Jasper AI",
-        category: "writing",
-        description_ar: "مساعد كتابة ذكي لإنشاء محتوى تسويقي ومقالات احترافية.",
-        description_en: "Intelligent writing assistant for marketing content and professional articles.",
+        id: 7,
+        name: "Rytr",
+        category: "video",
+        description_ar: "لا تعاني من بياض الصفحة بعد الآن. Rytr يساعدك على كتابة رسائل البريد، المقالات، ومنشورات التواصل الاجتماعي بالعربية والإنجليزية في ثوانٍ.",
+        description_en: "Say goodbye to writer's block! Rytr helps you create high-quality content for emails, blogs, and social media posts in seconds. It supports 30+",
         rating: 4.5,
-        logo: "https://ui-avatars.com/api/?name=JA&background=random&size=128",
-        link: "#"
+        logo: "logos/66b1dcd2494e76ae7da7b515.png",
+        link: "https://rytr.me/?via=ahmad-toama"
     },
     {
         id: 4,
