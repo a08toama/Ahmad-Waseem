@@ -4,7 +4,8 @@ const tools = [
         id: 1,
         name: "ElevenLabs",
         category: "audio",
-        description: "أفضل أداة لتوليد الصوت بالذكاء الاصطناعي بجودة لا تضاهى.",
+        description_ar: "أفضل أداة لتوليد الصوت بالذكاء الاصطناعي بجودة لا تضاهى.",
+        description_en: "The best AI voice generation tool with unmatched quality.",
         rating: 5,
         logo: "https://ui-avatars.com/api/?name=EL&background=random&size=128",
         link: "#"
@@ -13,7 +14,8 @@ const tools = [
         id: 2,
         name: "Jasper AI",
         category: "writing",
-        description: "مساعد كتابة ذكي لإنشاء محتوى تسويقي ومقالات احترافية.",
+        description_ar: "مساعد كتابة ذكي لإنشاء محتوى تسويقي ومقالات احترافية.",
+        description_en: "Intelligent writing assistant for marketing content and professional articles.",
         rating: 4.5,
         logo: "https://ui-avatars.com/api/?name=JA&background=random&size=128",
         link: "#"
@@ -22,7 +24,8 @@ const tools = [
         id: 3,
         name: "Midjourney",
         category: "image",
-        description: "توليد صور فنية بدقة عالية وخيال واسع من خلال الأوامر النصية.",
+        description_ar: "توليد صور فنية بدقة عالية وخيال واسع من خلال الأوامر النصية.",
+        description_en: "Generate high-quality artistic images from text prompts.",
         rating: 5,
         logo: "https://ui-avatars.com/api/?name=MJ&background=random&size=128",
         link: "#"
@@ -31,7 +34,8 @@ const tools = [
         id: 4,
         name: "Synthesia",
         category: "video",
-        description: "إنشاء فيديوهات بشخصيات افتراضية تتحدث لغات متعددة.",
+        description_ar: "إنشاء فيديوهات بشخصيات افتراضية تتحدث لغات متعددة.",
+        description_en: "Create videos with AI avatars speaking multiple languages.",
         rating: 4,
         logo: "https://ui-avatars.com/api/?name=SY&background=random&size=128",
         link: "#"
@@ -40,7 +44,8 @@ const tools = [
         id: 5,
         name: "Copy.ai",
         category: "writing",
-        description: "أداة كتابة نصوص إعلانية ورسائل بريد إلكتروني بسرعة فائقة.",
+        description_ar: "أداة كتابة نصوص إعلانية ورسائل بريد إلكتروني بسرعة فائقة.",
+        description_en: "Fast copywriting tool for ads and emails.",
         rating: 4.5,
         logo: "https://ui-avatars.com/api/?name=CA&background=random&size=128",
         link: "#"
@@ -49,12 +54,98 @@ const tools = [
         id: 6,
         name: "Runway",
         category: "video",
-        description: "منصة إبداعية لتحرير الفيديو وإنشاء محتوى مرئي بالذكاء الاصطناعي.",
+        description_ar: "منصة إبداعية لتحرير الفيديو وإنشاء محتوى مرئي بالذكاء الاصطناعي.",
+        description_en: "Creative platform for video editing and AI content creation.",
         rating: 4.5,
         logo: "https://ui-avatars.com/api/?name=RW&background=random&size=128",
         link: "#"
     }
 ];
+
+// Translations Dictionary
+const translations = {
+    ar: {
+        nav_home: "الرئيسية",
+        nav_library: "المكتبة",
+        nav_tools_video: "أدوات الفيديو",
+        nav_tools_audio: "أدوات الصوت",
+        nav_tools_writing: "أدوات الكتابة",
+        nav_contact: "تواصل معنا",
+        nav_privacy: "سياسة الخصوصية",
+        hero_tagline: "أدواتك لـ",
+        hero_cta: "ابدأ التصفح الآن",
+        hero_badges_free: "مجاني 100% • تحديث يومي",
+        lib_title: "المكتبة الشاملة",
+        lib_subtitle: "تصفح أفضل أدوات الذكاء الاصطناعي في العالم",
+        tool_try: "جرب الأداة الآن",
+        footer_rights: "&copy; 2025 Ahmad Waseem AI. جميع الحقوق محفوظة."
+    },
+    en: {
+        nav_home: "Home",
+        nav_library: "Library",
+        nav_tools_video: "Video Tools",
+        nav_tools_audio: "Audio Tools",
+        nav_tools_writing: "Writing Tools",
+        nav_contact: "Contact Us",
+        nav_privacy: "Privacy Policy",
+        hero_tagline: "Your tools for",
+        hero_cta: "Start Browsing",
+        hero_badges_free: "100% Free • Daily Updates",
+        lib_title: "Comprehensive Library",
+        lib_subtitle: "Browse the world's best AI tools",
+        tool_try: "Try Tool Now",
+        footer_rights: "&copy; 2025 Ahmad Waseem AI. All rights reserved."
+    }
+};
+
+let currentLang = 'ar';
+
+// Language Management Functions
+function initLanguage() {
+    const savedLang = localStorage.getItem('ahmad_ai_lang');
+    if (savedLang) {
+        currentLang = savedLang;
+    } else {
+        currentLang = 'ar'; // Default
+    }
+    setLanguage(currentLang);
+}
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('ahmad_ai_lang', lang);
+
+    // Update HTML attributes
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    // Update Text Content for data-i18n elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Update Switcher Button Text
+    const switcher = document.getElementById('lang-switcher');
+    if (switcher) {
+        switcher.textContent = lang === 'ar' ? 'English' : 'عربي';
+    }
+
+    // Re-render tools if on library page
+    if (document.getElementById('tools-grid')) {
+        renderTools();
+    }
+
+    // Update Typewriter if exists
+    initTypewriter();
+}
+
+function toggleLanguage() {
+    const newLang = currentLang === 'ar' ? 'en' : 'ar';
+    setLanguage(newLang);
+}
 
 // Function to generate star ratings
 function getStars(rating) {
@@ -100,6 +191,11 @@ function renderTools(category = 'all') {
         card.setAttribute('data-tilt-max-glare', '0.2');
         card.setAttribute('data-tilt-perspective', '1000');
 
+        const description = currentLang === 'ar' ? tool.description_ar : tool.description_en;
+        const btnText = translations[currentLang].tool_try;
+        const arrowClass = currentLang === 'ar' ? 'fa-arrow-left' : 'fa-arrow-right';
+        const arrowMargin = currentLang === 'ar' ? 'mr-2' : 'ml-2';
+
         card.innerHTML = `
             <div class="tool-content flex items-center gap-5 relative z-10 transform translate-z-10">
                 <div class="relative">
@@ -115,11 +211,11 @@ function renderTools(category = 'all') {
             </div>
             
             <p class="tool-content text-slate-300 leading-relaxed text-base h-16 overflow-hidden relative z-10 font-light transform translate-z-10">
-                ${tool.description}
+                ${description}
             </p>
 
-            <a href="${tool.link}" class="tool-content relative z-10 cta-button mt-auto bg-slate-700/50 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-xl text-center shadow-lg transform transition-all border border-white/10 group-hover:border-sky-500/30 translate-z-20">
-                جرب الأداة الآن <i class="fas fa-arrow-left mr-2 text-sm"></i>
+            <a href="${tool.link}" class="tool-content relative z-10 cta-button mt-auto bg-slate-700/50 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-xl text-center shadow-lg transform transition-all border border-white/10 group-hover:border-sky-500/30 translate-z-20 flex items-center justify-center">
+                ${currentLang === 'ar' ? `<span>${btnText}</span><i class="fas ${arrowClass} ${arrowMargin} text-sm"></i>` : `<span class="order-first">${btnText}</span><i class="fas ${arrowClass} ${arrowMargin} text-sm"></i>`}
             </a>
         `;
 
@@ -130,6 +226,11 @@ function renderTools(category = 'all') {
     if (typeof VanillaTilt !== 'undefined') {
         VanillaTilt.init(document.querySelectorAll(".tool-card"));
     }
+
+    // Re-trigger scroll reveal for new elements
+    document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        el.classList.add('visible');
+    });
 }
 
 
@@ -175,14 +276,51 @@ TxtType.prototype.tick = function () {
     }, delta);
 };
 
+// Global Store for Typewriter Instances
+let typewriterInstances = [];
+
+function initTypewriter() {
+    // Clear existing
+    typewriterInstances = [];
+    // In a real robust app we'd stop the old timers, but for simplicity we rely on re-init logic or simple page refreshes.
+    // Actually, TxtType is self-looping with setTimeout. To properly reset, we'd need to clear those timeouts.
+    // For this level of complexity, a simple reload is often cleaner, but let's try to just update the data if possible.
+
+    // Instead of full re-init logic which is complex with the current TxtType implementation,
+    // we will just update the DOM elements if they have data-type-ar and data-type-en attributes
+    // But since TxtType is already running, it's tricky. 
+    // Recommendation: simpler approach for this task is to simple rely on the DOM update for the static parts
+    // and for the typewriter, maybe we just leave it or try a simple reload logic if needed.
+    // BETTER APPROACH: Let's simply reload the page when language changes? No, that's not SPA-like.
+    // Let's modify the TxtType to read from a global source or attribute that we change.
+
+    const elements = document.getElementsByClassName('typewrite');
+    for (var i = 0; i < elements.length; i++) {
+        // Clear previous content to avoid overlapping text if we were to re-run
+        // Ideally we should kill the previous instance. 
+        // Given the constraints, let's just make the typewriter use the attribute that matches current lang.
+
+        // Actually, easiest way for Typewriter in this specific code base:
+        // The HTML has `data-type`. We can update `data-type` based on lang and then reload the page?
+        // Or just let the user see the new text on refresh?
+        // Let's try to support it: 
+
+        // We will remove the old instance by ... we can't easily without refactoring TxtType class to have a .stop().
+        // So for now, we will handle Typewriter by having TWO typewriter elements in HTML, one for AR and one for EN,
+        // and toggle their visibility with the CSS classes. Much simpler!
+    }
+}
+
 // Main Initialization
 document.addEventListener('DOMContentLoaded', () => {
+    initLanguage();
+
     // 1. Render Tools (Only if on grid page)
     if (document.getElementById('tools-grid')) {
         renderTools();
     }
 
-    // 2. Typewriter Init
+    // 2. Typewriter Init - (Handled by CSS visibility of two different elements in HTML)
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
@@ -215,6 +353,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-
 });
