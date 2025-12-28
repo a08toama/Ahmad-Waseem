@@ -27,7 +27,7 @@ const tools = [
         description_ar: "لا تعاني من بياض الصفحة بعد الآن. Rytr يساعدك على كتابة رسائل البريد، المقالات، ومنشورات التواصل الاجتماعي بالعربية والإنجليزية في ثوانٍ.",
         description_en: "Say goodbye to writer's block! Rytr helps you create high-quality content for emails, blogs, and social media posts in seconds. It supports 30+",
         rating: 4.5,
-        logo: "logos/66b1dcd2494e76ae7da7b515.png",
+        logo: "https://rytr.me/favicon.ico",
         link: "https://rytr.me/?via=ahmad-toama"
     },
     {
