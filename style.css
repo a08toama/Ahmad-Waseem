@@ -16,6 +16,15 @@ body {
 
 
 
+/* Language Visibility Utilities */
+html[lang="ar"] [data-lang="en"] {
+    display: none !important;
+}
+
+html[lang="en"] [data-lang="ar"] {
+    display: none !important;
+}
+
 /* Dynamic Background */
 .bg-grid-pattern {
     position: fixed;
