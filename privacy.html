@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Ahmad Waseem AI</title>
+
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#15202e', // Between 800 and 900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-900 text-slate-50 min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- Background Decoration -->
+    <div class="bg-grid-pattern"></div>
+    <div class="bg-watermark">Ahmad Waseem AI</div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-slate-900/50 backdrop-blur-xl border-b border-white/5">
+        <div class="container mx-auto px-4 py-3 md:py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-tr from-sky-400 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg group-hover:scale-110 transition-transform">
+                    AW
+                </div>
+                <span
+                    class="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-400">Ahmad
+                    Waseem AI</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav
+                class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm font-medium text-slate-300 w-full md:w-auto">
+                <a href="apps.html" data-i18n="nav_library"
+                    class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">المكتبة</a>
+                <a href="contact.html" data-i18n="nav_contact"
+                    class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">تواصل معنا</a>
+                <a href="index.html" data-i18n="nav_home"
+                    class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">الرئيسية</a>
+
+                <button onclick="toggleLanguage()" id="lang-switcher"
+                    class="bg-slate-800 text-white px-3 py-1 rounded-full border border-white/10 hover:border-sky-500 transition-colors text-xs font-bold ml-2">
+                    English
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for Fixed Header -->
+    <div class="h-24"></div>
+
+    <!-- Content Section -->
+    <section class="py-10 px-4 relative z-10">
+        <div class="container mx-auto max-w-4xl">
+
+            <!-- ARABIC CONTENT -->
+            <div data-lang="ar">
+                <h1 class="text-4xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fas fa-shield-alt text-sky-500"></i>
+                    سياسة الخصوصية
+                </h1>
+
+                <div class="bg-slate-800/50 backdrop-blur-md border border-white/5 rounded-2xl p-8 shadow-xl">
+                    <div class="space-y-6 text-slate-300 leading-relaxed">
+                        <p>نحن في <strong>Ahmad Waseem AI</strong> نولي اهتماماً كبيراً لخصوصيتك. توضح سياسة الخصوصية
+                            هذه كيفية جمع واستخدام وحماية معلوماتك الشخصية عند زيارة موقعنا.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">جمع المعلومات</h2>
+                        <p>نحن لا نجمع أي معلومات شخصية منك تلقائياً عند زيارة الموقع. قد يتم جمع بعض البيانات التقنية
+                            مثل نوع المتصفح وعنوان IP لتحسين تجربة المستخدم.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">استخدام المعلومات</h2>
+                        <p>يتم استخدام المعلومات التي نجمعها فقط لتحسين أداء الموقع وتحليل حركة المرور لتقديم محتوى
+                            أفضل.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">ملفات الارتباط (Cookies)</h2>
+                        <p>يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربتك. يمكنك تعطيل ملفات تعريف الارتباط من إعدادات
+                            المتصفح الخاص بك، ولكن قد يؤثر ذلك على بعض وظائف الموقع.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">اتصل بنا</h2>
+                        <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر صفحة <a
+                                href="contact.html" class="text-sky-400 hover:underline">تواصل معنا</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENGLISH CONTENT -->
+            <div data-lang="en">
+                <h1 class="text-4xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fas fa-shield-alt text-sky-500"></i>
+                    Privacy Policy
+                </h1>
+
+                <div class="bg-slate-800/50 backdrop-blur-md border border-white/5 rounded-2xl p-8 shadow-xl">
+                    <div class="space-y-6 text-slate-300 leading-relaxed">
+                        <p>At <strong>Ahmad Waseem AI</strong>, we value your privacy. This policy explains how we
+                            collect, use, and protect your information when you visit our website.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">Information Collection</h2>
+                        <p>We do not automatically collect personal information. We may collect technical data like
+                            browser type and IP address to improve user experience.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">Information Usage</h2>
+                        <p>The information collected is used solely to improve site performance and analyze traffic to
+                            provide better content.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">Cookies</h2>
+                        <p>Our website uses cookies to enhance your experience. You can disable cookies in your browser
+                            settings, though this may affect some site functionality.</p>
+
+                        <h2 class="text-2xl font-bold text-white mt-8 mb-4">Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy, please contact us via the <a
+                                href="contact.html" class="text-sky-400 hover:underline">Contact Us</a> page.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VanillaTilt Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 mt-auto py-8 relative z-10">
+        <div class="container mx-auto px-4 text-center text-slate-400 text-sm">
+            <p data-i18n="footer_rights">&copy; 2025 Ahmad Waseem AI. جميع الحقوق محفوظة.</p>
+
+            <div class="mt-4 flex justify-center gap-6 text-sm">
+                <a href="privacy.html" data-i18n="nav_privacy" class="hover:text-sky-400 transition-colors">سياسة
+                    الخصوصية</a>
+                <a href="contact.html" data-i18n="nav_contact" class="hover:text-sky-400 transition-colors">تواصل
+                    معنا</a>
+            </div>
+
+            <div class="flex justify-center gap-4 mt-6">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/toama29/?next=%2F" class="hover:text-white transition-colors"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
