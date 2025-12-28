@@ -2,6 +2,16 @@
 const tools = [
     {
         id: 1,
+        name: "InVideo",
+        category: "video",
+        description_ar: "منصة شاملة لتحويل النص إلى فيديو وإنشاء محتوى مرئي احترافي.",
+        description_en: "Comprehensive platform to turn text into video and create professional visual content.",
+        rating: 4.8,
+        logo: "https://ui-avatars.com/api/?name=IV&background=random&size=128",
+        link: "#"
+    },
+    {
+        id: 2,
         name: "ElevenLabs",
         category: "audio",
         description_ar: "أفضل أداة لتوليد الصوت بالذكاء الاصطناعي بجودة لا تضاهى.",
@@ -11,7 +21,7 @@ const tools = [
         link: "#"
     },
     {
-        id: 2,
+        id: 3,
         name: "Jasper AI",
         category: "writing",
         description_ar: "مساعد كتابة ذكي لإنشاء محتوى تسويقي ومقالات احترافية.",
@@ -21,7 +31,7 @@ const tools = [
         link: "#"
     },
     {
-        id: 3,
+        id: 4,
         name: "Midjourney",
         category: "image",
         description_ar: "توليد صور فنية بدقة عالية وخيال واسع من خلال الأوامر النصية.",
@@ -31,7 +41,7 @@ const tools = [
         link: "#"
     },
     {
-        id: 4,
+        id: 5,
         name: "Synthesia",
         category: "video",
         description_ar: "إنشاء فيديوهات بشخصيات افتراضية تتحدث لغات متعددة.",
@@ -41,7 +51,7 @@ const tools = [
         link: "#"
     },
     {
-        id: 5,
+        id: 6,
         name: "Copy.ai",
         category: "writing",
         description_ar: "أداة كتابة نصوص إعلانية ورسائل بريد إلكتروني بسرعة فائقة.",
@@ -51,7 +61,7 @@ const tools = [
         link: "#"
     },
     {
-        id: 6,
+        id: 7,
         name: "Runway",
         category: "video",
         description_ar: "منصة إبداعية لتحرير الفيديو وإنشاء محتوى مرئي بالذكاء الاصطناعي.",
