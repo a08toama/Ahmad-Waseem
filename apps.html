@@ -62,18 +62,26 @@
 
             <!-- Navigation -->
             <nav
-                class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm font-medium text-slate-300 w-full md:w-auto">
-                <a href="#" onclick="renderTools('video')"
+                class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm font-medium text-slate-300 w-full md:w-auto">
+                <a href="#" onclick="renderTools('video')" data-i18n="nav_tools_video"
                     class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">أدوات
                     الفيديو</a>
-                <a href="#" onclick="renderTools('audio')"
+                <a href="#" onclick="renderTools('audio')" data-i18n="nav_tools_audio"
                     class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">أدوات
                     الصوت</a>
-                <a href="#" onclick="renderTools('writing')"
+                <a href="#" onclick="renderTools('writing')" data-i18n="nav_tools_writing"
                     class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">أدوات
                     الكتابة</a>
-                <a href="index.html"
+                <a href="contact.html" data-i18n="nav_contact"
+                    class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">تواصل
+                    معنا</a>
+                <a href="index.html" data-i18n="nav_home"
                     class="hover:text-sky-400 transition-colors py-1 px-2 whitespace-nowrap">الرئيسية</a>
+
+                <button onclick="toggleLanguage()" id="lang-switcher"
+                    class="bg-slate-800 text-white px-3 py-1 rounded-full border border-white/10 hover:border-sky-500 transition-colors text-xs font-bold ml-2">
+                    English
+                </button>
             </nav>
         </div>
     </header>
@@ -88,9 +96,10 @@
                 <div>
                     <h2 class="text-4xl font-bold mb-4 flex items-center gap-3">
                         <i class="fas fa-layer-group text-sky-500"></i>
-                        المكتبة الشاملة
+                        <span data-i18n="lib_title">المكتبة الشاملة</span>
                     </h2>
-                    <p class="text-slate-400 text-lg">تصفح أفضل أدوات الذكاء الاصطناعي في العالم</p>
+                    <p class="text-slate-400 text-lg" data-i18n="lib_subtitle">تصفح أفضل أدوات الذكاء الاصطناعي في
+                        العالم</p>
                 </div>
             </div>
 
@@ -106,11 +115,20 @@
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800 mt-auto py-8 relative z-10">
         <div class="container mx-auto px-4 text-center text-slate-400 text-sm">
-            <p>&copy; 2025 Ahmad Waseem AI. جميع الحقوق محفوظة.</p>
+            <p data-i18n="footer_rights">&copy; 2025 Ahmad Waseem AI. جميع الحقوق محفوظة.</p>
+
+            <div class="mt-4 flex justify-center gap-6 text-sm">
+                <a href="privacy.html" data-i18n="nav_privacy" class="hover:text-sky-400 transition-colors">سياسة
+                    الخصوصية</a>
+                <a href="contact.html" data-i18n="nav_contact" class="hover:text-sky-400 transition-colors">تواصل
+                    معنا</a>
+            </div>
+
             <div class="flex justify-center gap-4 mt-4">
                 <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/toama29/?next=%2F" class="hover:text-white transition-colors"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
