@@ -8,7 +8,7 @@ const tools = [
         description_en: "Comprehensive platform to turn text into video and create professional visual content.",
         rating: 4.8,
         logo: "https://ui-avatars.com/api/?name=IV&background=random&size=128",
-        link: "#"
+        link: "https://invideo.sjv.io/POe74M"
     },
     {
         id: 2,
